@@ -1,0 +1,146 @@
+customer_id=Amerihealth | source=failed_log.txt
+================================================================================
+[2026-07-10 18:27:45] INFO: running as root
+[2026-07-10 18:27:45] INFO: installation started
+Failed to stop nm-cloud-setup.service: Unit nm-cloud-setup.service not loaded.
+Failed to stop nm-cloud-setup.timer: Unit nm-cloud-setup.timer not loaded.
+Failed to disable unit: Unit nm-cloud-setup.service does not exist
+Last metadata expiration check: 2:23:34 ago on Fri 10 Jul 2026 04:04:12 PM GMT.
+Dependencies resolved.
+================================================================================
+ Package              Arch      Version                 Repository         Size
+================================================================================
+Installing:
+ container-selinux    noarch    4:2.240.0-10.el10_1     ol10_appstream     72 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 72 k
+Installed size: 73 k
+Downloading Packages:
+container-selinux-2.240.0-10.el10_1.noarch.rpm  351 kB/s |  72 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           348 kB/s |  72 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Running scriptlet: container-selinux-4:2.240.0-10.el10_1.noarch           1/1 
+  Installing       : container-selinux-4:2.240.0-10.el10_1.noarch           1/1 
+  Running scriptlet: container-selinux-4:2.240.0-10.el10_1.noarch           1/1 
+
+Installed:
+  container-selinux-4:2.240.0-10.el10_1.noarch                                  
+
+Complete!
+Last metadata expiration check: 2:23:51 ago on Fri 10 Jul 2026 04:04:12 PM GMT.
+No match for argument: k3s-selinux
+Error: Unable to find a match: k3s-selinux
+WARN: k3s-selinux unavailable via system repo or bundled RPM on 10.1
+[2026-07-10 18:28:03] WARN: no container-selinux/k3s-selinux package available for 10.1 — SELinux set to permissive
+[2026-07-10 18:28:03] INFO: Checking for existing installation...
+[2026-07-10 18:29:38] OK:   Pod CIDR: 10.42.0.0/20  /  Service CIDR: 10.43.0.0/20
+[2026-07-10 18:29:42] OK:   Deployment: Single node
+[2026-07-10 18:29:42] INFO: Detected network interface:
+[2026-07-10 18:30:46] OK:   Node 1 interface: enp0s9  →  IP/DNS 132.226.51.231
+[2026-07-10 18:31:03] OK: Docker Hub credentials valid
+[2026-07-10 18:31:03] OK:   Docker Hub credentials verified
+[2026-07-10 18:31:05] OK: configuration saved to /matilda/rapid_discover/config
+[2026-07-10 18:31:05] OK: tool openssl
+[2026-07-10 18:31:05] OK: tool curl
+[2026-07-10 18:31:05] OK: tool git
+[2026-07-10 18:31:05] OK: tool unzip
+[2026-07-10 18:31:05] OK: tool host
+[2026-07-10 18:31:05] OK: tool nc
+[2026-07-10 18:31:05] OK: tool tar
+[2026-07-10 18:31:05] OK: tool ssh
+[2026-07-10 18:31:05] OK: tool ssh-keygen
+[2026-07-10 18:31:05] OK: tool getent
+[2026-07-10 18:31:05] OK:   All required tools present
+[2026-07-10 18:31:05] OK:   CPU:    16 vCPUs  (minimum: 11)
+[2026-07-10 18:31:05] OK:   Memory: 34 GB     (minimum: 23 GB)
+[2026-07-10 18:31:05] OK:   Disk (/):              24 GB  (minimum: 1 GB)
+[2026-07-10 18:31:05] OK: Disk (/matilda): 299 GB
+[2026-07-10 18:31:05] OK: source/install.sh
+[2026-07-10 18:31:05] OK: source/k3s
+[2026-07-10 18:31:05] OK: source/helm/linux-amd64/helm
+[2026-07-10 18:31:05] OK: source/vault.sh
+[2026-07-10 18:31:05] OK: source/rabbitmq.sh
+[2026-07-10 18:31:05] OK: source/rabbitmq_queues.json
+[2026-07-10 18:31:05] OK: source/info
+[2026-07-10 18:31:05] OK: agent_setup.sh
+[2026-07-10 18:31:05] OK: discovery/helm/matildasecret.yaml
+[2026-07-10 18:31:05] OK: discovery/helm/secret.yaml
+[2026-07-10 18:31:05] OK: optimize/helm
+[2026-07-10 18:31:05] OK: discovery/helm
+[2026-07-10 18:31:05] OK: optimize/helm/elasticsearch
+[2026-07-10 18:31:05] OK: optimize/helm/kibana
+[2026-07-10 18:31:05] OK: optimize/helm/vault
+[2026-07-10 18:31:05] OK: optimize/helm/mongo-local
+[2026-07-10 18:31:05] OK: optimize/helm/mysql-local
+[2026-07-10 18:31:05] OK: optimize/helm/rabbitmq
+[2026-07-10 18:31:05] OK: optimize/helm/new_keycloak/keycloak
+[2026-07-10 18:31:05] OK: optimize/helm/agent-metrics
+[2026-07-10 18:31:05] OK: optimize/helm/cmdb
+[2026-07-10 18:31:05] OK: optimize/helm/management
+[2026-07-10 18:31:05] OK: optimize/helm/cmdb-cost-monitoring
+[2026-07-10 18:31:05] OK: optimize/helm/dynamic-dashboard
+[2026-07-10 18:31:05] OK: optimize/helm/optimize-old
+[2026-07-10 18:31:05] OK: optimize/helm/scheduler
+[2026-07-10 18:31:05] OK: optimize/helm/optimize-dashboard
+[2026-07-10 18:31:05] OK: optimize/helm/py-dashboard
+[2026-07-10 18:31:05] OK: optimize/helm/app-grouping
+[2026-07-10 18:31:05] OK: optimize/helm/commitments-dashboard
+[2026-07-10 18:31:05] OK: optimize/helm/assessment
+[2026-07-10 18:31:05] OK: optimize/helm/de_resource_handler
+[2026-07-10 18:31:05] OK: optimize/helm/de_worker
+[2026-07-10 18:31:05] OK: optimize/helm/ppt
+[2026-07-10 18:31:05] OK: optimize/helm/report-execution-service
+[2026-07-10 18:31:05] OK: optimize/helm/cost
+[2026-07-10 18:31:05] OK: optimize/helm/discovery
+[2026-07-10 18:31:05] OK: optimize/helm/agent
+[2026-07-10 18:31:05] OK: optimize/helm/ui
+[2026-07-10 18:31:05] OK:   All required files and helm charts present
+[2026-07-10 18:31:05] OK: url https://auth.docker.io/ (HTTP 404)
+[2026-07-10 18:31:05] OK: url https://hub.docker.com/ (HTTP 200)
+[2026-07-10 18:31:06] OK: url https://production.cloudflare.docker.com/ (HTTP 403)
+[2026-07-10 18:31:06] OK: url https://registry-1.docker.io/ (HTTP 404)
+[2026-07-10 18:31:06] OK: url https://production.cloudfront.docker.com (HTTP 403)
+[2026-07-10 18:31:06] OK: url https://raw.githubusercontent.com (HTTP 301)
+[2026-07-10 18:31:06] OK: url https://dev.azure.com (HTTP 302)
+[2026-07-10 18:31:06] OK: url https://mdeploycn.matildacloud.com (HTTP 200)
+[2026-07-10 18:31:06] OK:   All URLs reachable
+[2026-07-10 18:31:06] OK: url https://auth.docker.io/ (HTTP 404)
+[2026-07-10 18:31:06] OK: url https://hub.docker.com/ (HTTP 200)
+[2026-07-10 18:31:06] OK: url https://production.cloudflare.docker.com/ (HTTP 403)
+[2026-07-10 18:31:06] OK: url https://registry-1.docker.io/ (HTTP 404)
+[2026-07-10 18:31:06] OK: url https://production.cloudfront.docker.com (HTTP 403)
+[2026-07-10 18:31:06] OK: url https://raw.githubusercontent.com (HTTP 301)
+[2026-07-10 18:31:06] OK: url https://dev.azure.com (HTTP 302)
+[2026-07-10 18:31:06] OK: url https://mdeploycn.matildacloud.com (HTTP 200)
+[2026-07-10 18:31:06] OK:   URL connectivity OK
+[2026-07-10 18:31:06] === STEP 1: Creating directory structure ===
+[2026-07-10 18:31:06] OK: directory structure created under /matilda
+[2026-07-10 18:31:06] === STEP 2: Configuring TLS certificate ===
+[2026-07-10 18:31:06] INFO: generating self-signed cert for 132.226.51.231
+..+..+++++++++++++++++++++++++++++++++++++++++++++*........+.+...+.....+......+.+...+..+++++++++++++++++++++++++++++++++++++++++++++*.......+.........+.+..+.......+......+.....+....+..............+...........................+.......+.....+.+.....+....+...+..+.......+......+.........+......+..+............+.+..+.......+...+......+...............+......+.....+...+................+......+.....+.+..............+.+............+............+......+.....+...+....+..+...............+....+....................+.+...+...+..+................+............+.....+....+..............+......+.+..+.....................+............+.........+..........+...........+.......+..+...+.........................+...+..+...+.........+...+.+.................+...+....+.....+.+...............+.....+......+.+.....+...+.+...+...+...+..+.......+......+........................+...+...+.........+......+.................+....+.....................+.....+.......+.....+......................+...........+...+.+...+...+..+.+.....+.......+............+........+..................+....+......+.........+......+......+...........+.......+.....+.+++++
+.+......+..+...+.........+.+++++++++++++++++++++++++++++++++++++++++++++*..+.+.........+......+..+......+.......+..+...+.........+.+...+..+...+....+...+...+...............+.........+...+..+.+.....+....+...+++++++++++++++++++++++++++++++++++++++++++++*......+...+.......+..+................+............+...+...........+.+...+...............+.....+...............+....+................................+.............+.....+.+.........+.....+.............+..+...+............+......+.+...+...+..................+.........+.....+.+..+.............+.....+......+..........+.........+..............+...+...+..........+.........+......+.........+..+.........+....+...........+.+.....+.........+.+......+...+..............+............+.+........+......+...............+...+.+.........+......+..+..............................+....+...........+...+.+......+............+.....+......................+........+......+....+..+...................+...........+......+....+...........+...................+...+..+....+.........+........+............+.......+.....+...+......+++++
+-----
+[2026-07-10 18:31:07] OK: self-signed cert generated
+[2026-07-10 18:31:07] OK:   Self-signed certificate generated
+[2026-07-10 18:31:07] === STEP 3: Setting up k3s master ===
+127.0.0.1 oracle-10-1-testing
+[2026-07-10 18:31:07] INFO: added /etc/hosts entry: 127.0.0.1 oracle-10-1-testing
+[2026-07-10 18:31:07] INFO: installing k3s on master node
+[2026-07-10 18:31:07] INFO: /home/opc/.rancher → /matilda/.rancher (k3s extraction redirect)
+[INFO]  Skipping k3s download and verify
+[INFO]  Skipping installation of SELinux RPM
+[ERROR]  Failed to find the k3s-selinux policy, please install:
+    yum install -y container-selinux selinux-policy-base
+    yum install -y https://rpm.rancher.io/k3s/stable/common/centos/8/noarch/k3s-selinux-0.3-0.el8.noarch.rpm
+
+[2026-07-10 18:31:07] FATAL: k3s installation failed — see /matilda/.config/log/matilda_install_20260710_182745.log

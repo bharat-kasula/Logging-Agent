@@ -1,0 +1,70 @@
+{
+  "description": "Sample FAILURE logs for demo simulation. Can also be generated from success via UI.",
+  "customer": "CustomerA",
+  "scenario": "installation_failure_timeout",
+  "logs": [
+    {
+      "timestamp": "2026-08-01T10:00:01Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Starting installation for tenant CustomerA",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:05Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Validating license key... OK",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:12Z",
+      "level": "WARN",
+      "service": "installer",
+      "message": "Downloading package matilda-core-2.4.1.tgz (status=503) retry=1/3",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:28Z",
+      "level": "WARN",
+      "service": "installer",
+      "message": "Downloading package matilda-core-2.4.1.tgz (status=503) retry=2/3",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:50Z",
+      "level": "ERROR",
+      "service": "installer",
+      "message": "Package download failed after 3 retries: connection timeout to artifact-registry.internal:443",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:51Z",
+      "level": "ERROR",
+      "service": "installer",
+      "message": "FATAL: installation aborted — missing core package matilda-core-2.4.1",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:52Z",
+      "level": "ERROR",
+      "service": "db-migrator",
+      "message": "Skipping migrations — installer reported package failure (exit_code=1)",
+      "labels": { "customer": "CustomerA", "job": "db-migrator", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:01:00Z",
+      "level": "ERROR",
+      "service": "healthcheck",
+      "message": "GET /health -> 000 connection refused latency=timeout",
+      "labels": { "customer": "CustomerA", "job": "healthcheck", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:01:05Z",
+      "level": "ERROR",
+      "service": "installer",
+      "message": "Installation FAILED for CustomerA: root_cause=artifact_download_timeout",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    }
+  ]
+}

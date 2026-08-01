@@ -1,0 +1,63 @@
+{
+  "description": "Sample SUCCESS logs for demo simulation. Edit freely.",
+  "customer": "CustomerA",
+  "scenario": "installation_success",
+  "logs": [
+    {
+      "timestamp": "2026-08-01T10:00:01Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Starting installation for tenant CustomerA",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:05Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Validating license key... OK",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:12Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Downloading package matilda-core-2.4.1.tgz (status=200)",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:00:45Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Checksum verified: sha256=ok",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:01:10Z",
+      "level": "INFO",
+      "service": "db-migrator",
+      "message": "Running migrations... applied 12 migrations successfully",
+      "labels": { "customer": "CustomerA", "job": "db-migrator", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:01:40Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Service matilda-api started on :8080 (status=healthy)",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:01:55Z",
+      "level": "INFO",
+      "service": "installer",
+      "message": "Installation completed successfully for CustomerA",
+      "labels": { "customer": "CustomerA", "job": "installer", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T10:02:00Z",
+      "level": "INFO",
+      "service": "healthcheck",
+      "message": "GET /health -> 200 OK latency=42ms",
+      "labels": { "customer": "CustomerA", "job": "healthcheck", "env": "prod" }
+    }
+  ]
+}

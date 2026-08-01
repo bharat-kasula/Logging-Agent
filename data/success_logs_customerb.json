@@ -1,0 +1,28 @@
+{
+  "description": "Second customer SUCCESS sample for multi-customer demos.",
+  "customer": "CustomerB",
+  "scenario": "api_success",
+  "logs": [
+    {
+      "timestamp": "2026-08-01T11:00:00Z",
+      "level": "INFO",
+      "service": "api-gateway",
+      "message": "Request POST /v1/orders accepted customer=CustomerB request_id=req-9001",
+      "labels": { "customer": "CustomerB", "job": "api-gateway", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T11:00:01Z",
+      "level": "INFO",
+      "service": "order-service",
+      "message": "Order created id=ord-441 status=CONFIRMED",
+      "labels": { "customer": "CustomerB", "job": "order-service", "env": "prod" }
+    },
+    {
+      "timestamp": "2026-08-01T11:00:02Z",
+      "level": "INFO",
+      "service": "payment-service",
+      "message": "Payment authorized amount=120.00 currency=USD status=200",
+      "labels": { "customer": "CustomerB", "job": "payment-service", "env": "prod" }
+    }
+  ]
+}
